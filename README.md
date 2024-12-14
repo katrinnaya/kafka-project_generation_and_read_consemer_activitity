@@ -33,9 +33,9 @@
 
 После запуска контейнеров создаем топик example_topic:
 
-``` docker exec -it kafka /bin/bash
+``` docker exec -it kafka /bin/bash ```
 
-kafka-topics --create --bootstrap-server localhost:9092 --topic example_topic --partitions 1 --replication-factor 1
+``` kafka-topics --create --bootstrap-server localhost:9092 --topic example_topic --partitions 1 --replication-factor 1
 ```
 
 
@@ -51,8 +51,8 @@ python generate_data.py
 
 Запустите консьюмера для анализа данных:
 
-``` docker exec -it kafka /bin/bash
-kafka-console-consumer --bootstrap-server localhost:9092 --topic example_topic --from-beginning
+``` docker exec -it kafka /bin/bash ```
+``` kafka-console-consumer --bootstrap-server localhost:9092 --topic example_topic --from-beginning
 ```
 
 
