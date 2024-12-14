@@ -26,17 +26,15 @@
 2. Перейти в директорию проекта:
       
 
-3. Запуск контейнеров с помощью Docker Compose:
-   
-   docker-compose up -d
+3. Запуск контейнеров с помощью Docker Compose: ``` docker-compose up -d ```
    
 
 ### Создание топика
 
 После запуска контейнеров создаем топик example_topic:
 
-docker exec -it kafka /bin/bash
-kafka-topics --create --bootstrap-server localhost:9092 --topic example_topic --partitions 1 --replication-factor 1
+``` docker exec -it kafka /bin/bash
+kafka-topics --create --bootstrap-server localhost:9092 --topic example_topic --partitions 1 --replication-factor 1 ```
 
 
 ### Генерация и отправка данных
@@ -51,8 +49,8 @@ python generate_data.py
 
 Запустите консьюмера для анализа данных:
 
-docker exec -it kafka /bin/bash
-kafka-console-consumer --bootstrap-server localhost:9092 --topic example_topic --from-beginning
+``` docker exec -it kafka /bin/bash
+kafka-console-consumer --bootstrap-server localhost:9092 --topic example_topic --from-beginning ```
 
 
 ### Вывод пользователей с наибольшим количеством действий
