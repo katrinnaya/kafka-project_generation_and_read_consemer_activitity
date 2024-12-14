@@ -34,6 +34,7 @@
 После запуска контейнеров создаем топик example_topic:
 
 ``` docker exec -it kafka /bin/bash
+
 kafka-topics --create --bootstrap-server localhost:9092 --topic example_topic --partitions 1 --replication-factor 1
 ```
 
