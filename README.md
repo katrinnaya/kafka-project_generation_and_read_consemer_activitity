@@ -51,6 +51,7 @@ python generate_data.py
 Запустите консьюмера для анализа данных:
 
 ``` docker exec -it kafka /bin/bash ```
+
 ``` kafka-console-consumer --bootstrap-server localhost:9092 --topic example_topic --from-beginning ```
 
 
